@@ -129,6 +129,41 @@ background: radial-gradient(circle, rgba(0,0,7,1) 0%, rgb(1, 28, 55) 92%, rgba(1
     margin: 10px;
 }
 
+.css-selectors{
+  position: relative;
+  
+  padding: 0.5rem 1rem;
+  font-size: 1.2rem;
+  border: none;
+  color: 
+white;
+  cursor: pointer;
+  outline: none;
+  overflow: hidden;
+}
+
+css-selectors span {
+  position: relative;
+}
+.css-selectors:before {
+  --size: 0;
+  content: '';
+  position: absolute;
+  left: var(--x);
+  top: var(--y);
+  width: var(--size);
+  height: var(--size);
+  background: radial-gradient(circle closest-side, rgb(239, 239, 239), transparent);
+  transform: translate(-50%, -50%);
+  transition: width 0.2s ease, height 0.2s ease;
+}
+
+.css-selectors:hover:before {
+  --size: 200px;
+}
+
+
+
 .glow-button {
             background-color: #000000; /* Set your button background color */
             color: #faf7f7; /* Set your button text color */
